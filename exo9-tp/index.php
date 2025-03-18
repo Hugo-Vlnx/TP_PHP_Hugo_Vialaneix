@@ -1,0 +1,1 @@
+<?php require('../exo9-tp/Model/pdo.php'); ?>
