@@ -48,5 +48,13 @@ foreach ($profs as $prof) {
 }
 echo '</ul>';
 
+$matiere = 'Anglais';
+$resultat = $dbPDO->prepare("INSERT INTO matiere (lib) VALUES (:matiere)");
+$resultat->bindParam(':matiere', $matiere);
+if ($resultat->execute()) {
+    echo "La matière '$matiere' a été ajoutée avec succès.";
+} else {
+    print_r($resultat->errorInfo());
+}
 
 ?>
