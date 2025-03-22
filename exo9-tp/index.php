@@ -48,13 +48,19 @@ foreach ($profs as $prof) {
 }
 echo '</ul>';
 
-$matiere = 'Anglais';
-$resultat = $dbPDO->prepare("INSERT INTO matiere (lib) VALUES (:matiere)");
-$resultat->bindParam(':matiere', $matiere);
-if ($resultat->execute()) {
-    echo "La matière '$matiere' a été ajoutée avec succès.";
-} else {
-    print_r($resultat->errorInfo());
-}
+// $matiere = 'Anglais';
+// $resultat = $dbPDO->prepare("INSERT INTO matiere (lib) VALUES (:matiere)");
+// $resultat->bindParam(':matiere', $matiere);
+// if ($resultat->execute()) {
+//     echo "La matière '$matiere' a été ajoutée avec succès.";
+// } else {
+//     print_r($resultat->errorInfo());
+// }
 
 ?>
+<h1>Ajouter une matière :</h1>
+<form action='../exo9-tp/View/nouvelle_matiere.php' method='post'>
+    <label>Entrer votre matière :</label>
+    <input type='text' name='libelle' />
+    <button type="submit">Valider</button>
+</form>
