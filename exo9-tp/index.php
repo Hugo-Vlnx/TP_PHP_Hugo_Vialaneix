@@ -9,8 +9,12 @@ echo '<h1>'."liste des éleves:".'</h1>'.'<br>';
 echo '<ul>';
 foreach ($etudiants as $etudiant) {
     echo '<li>'.$etudiant['id'].' - '.$etudiant['prenom'].' '.$etudiant['nom'].'</li>';
+    echo ' : <a href="View/modif_etudiant.php?id='.$etudiant['id'].'">Modifier</a>';
 }
 echo '</ul>';
+?>
+
+<?php
 
 
 

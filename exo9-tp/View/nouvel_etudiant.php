@@ -1,3 +1,4 @@
+<br>
 <?php 
 require('../Model/pdo.php');
 
@@ -15,5 +16,6 @@ if (isset($_POST['nom']) && isset($_POST['prenom'])) {
     echo "Nouvel élève ajouté : ".$prenom." ".$nom;
 }
 ?>
-
+<br>
+<a href="../index.php">Retourner à l'index</a>
 <br>
