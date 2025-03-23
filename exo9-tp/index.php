@@ -64,3 +64,13 @@ echo '</ul>';
     <input type='text' name='libelle' />
     <button type="submit">Valider</button>
 </form>
+<h1>Ajouter un nouvel élève</h1>
+<form action='../exo9-tp/View/nouvel_etudiant.php' method='post'>
+    <label>Prénom :</label>
+    <input type='text' name='prenom'>
+    <br>
+    <label>Nom :</label>
+    <input type='text' name='nom'>
+    <br>
+    <button type="submit">Valider</button>
+</form>

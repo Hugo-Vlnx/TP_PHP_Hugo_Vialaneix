@@ -2,11 +2,11 @@
 
 
 require('../Model/pdo.php');
-
+echo"<br>";
 if (isset($_POST['libelle'])) {
     $libelle = $_POST['libelle'];
 
-    // Utilisation de 'requete' au lieu de 'req'
+    
     $requete = $dbPDO->prepare("INSERT INTO matiere (lib) VALUES (:libelle)");
     $requete->bindParam(':libelle', $libelle);
     $requete->execute();
